@@ -2678,5 +2678,7 @@ img {
 }
 
 .servicio_img{
-    width: 100%;
+    width: 80%;
+    position: center;
+
 }
