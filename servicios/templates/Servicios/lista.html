@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+
+
+{% block body %}
+
+<main class="main-content">
+				<div class="page">
+					<div class="container">
+						
+						{% for servicio in lista_servicio %}
+							<div class="row">
+								<div class="col-md-3">
+									<div class="feature">
+										<img class="servicio_img" src="{{servicio.imagen.url}}" alt="">
+										<a class="feature-title" href="{% url 'servicios:detalle_servicio servicio.slug'%}">{{servicio.nombre}}</a>
+										<p>{{servicio.descripcion}} </p>
+									</div>
+								<!-- </div>
+								<div class="col-md-3">
+									<div class="feature">
+										<img src="images/icon-2.png" class="feature-image">
+										<h3 class="feature-title">COnsequatur</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, minus, totam. Officia </p>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="feature">
+										<img src="images/icon-3.png" class="feature-image">
+										<h3 class="feature-title">Temporibus</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, omnis cum, </p>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="feature">
+										<img src="images/icon-4.png" class="feature-image">
+										<h3 class="feature-title">Perferendis</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, facere numquam porro </p>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-3">
+									<div class="feature">
+										<img src="images/icon-5.png" class="feature-image">
+										<h3 class="feature-title">Voluptatem</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolor perferendis</p>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="feature">
+										<img src="images/icon-6.png" class="feature-image">
+										<h3 class="feature-title">COnsequatur</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, minus, totam. Officia ea</p>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="feature">
+										<img src="images/icon-7.png" class="feature-image">
+										<h3 class="feature-title">Temporibus</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, omnis cum, quo dolorem </p>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="feature">
+										<img src="images/icon-8.png" class="feature-image">
+										<h3 class="feature-title">Perferendis</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, facere numquam porro </p>
+									</div>
+								</div> -->
+							</div> <!-- .row -->
+						{% endfor %}
+
+
+		
+
+					</div>
+				</div>
+			</main>
+
+{% endblock body %}
+			
+
+			
