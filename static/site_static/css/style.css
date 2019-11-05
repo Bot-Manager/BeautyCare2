@@ -2671,6 +2671,7 @@ img {
 }
 
 .servicio_img{
+<<<<<<< HEAD
     width: 100%;
 =======
 #divReservas {
@@ -2681,4 +2682,9 @@ img {
     -o-background-size: cover;
     background-attachment: fixed;
 >>>>>>> origin/Alex
+=======
+    width: 80%;
+    position: center;
+
+>>>>>>> origin/Denisse
 }

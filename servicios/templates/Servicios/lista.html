@@ -13,9 +13,11 @@
 								<div class="col-md-3">
 									<div class="feature">
 										<img class="servicio_img" src="{{servicio.imagen.url}}" alt="">
-										<a class="feature-title" href="{% url 'servicios:detalle_servicio servicio.slug'%}">{{servicio.nombre}}</a>
+										<h3 class="feature-title"> <a href="{% url 'servicios:detalle_servicio' servicio.slug%}"> {{servicio.nombre}}</a></h3>
 										<p>{{servicio.descripcion}} </p>
 									</div>
+
+									
 								<!-- </div>
 								<div class="col-md-3">
 									<div class="feature">

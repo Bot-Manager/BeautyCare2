@@ -1,8 +1,12 @@
-<h1>Detalle Servicio</h1>
+{% extends 'base.html' %}
 
-<h2>{{detalle_servicio.nombre}}</h2>
+{% block body %}
+
+<img class="servicio_img" src="{{detalle_servicio.imagen.url}}" alt="">
+<h1>{{detalle_servicio.nombre}}</h1>
 
 <h3>{{detalle_servicio.descripcion}}</h3>
 <h3>{{detalle_servicio.precio}}</h3>
+<p>Precio $: {{detalle_servicio.precio}} </p>
 
-<img class="servicio_img" src="{{detalle_servicio.imagen.url}}" alt="">
+{% endblock body %}
