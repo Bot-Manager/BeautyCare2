@@ -1,13 +1,17 @@
 from django.shortcuts import render
 
 # Create your views here.
-from .models import Servicios
+from .models import Servicios , Categoria
 
 
 def lista_servicio(request):
     lista_servicio = Servicios.objects.all()
+    categorias = Categoria.objects.all()
 
-    context = {'lista_servicio' : lista_servicio ,}
+    context = {
+        'lista_servicio' : lista_servicio ,
+        'categorias' : categorias ,
+        }
 
     return render(request , 'Servicios/lista.html' , context)
 
