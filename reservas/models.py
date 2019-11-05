@@ -1,4 +1,6 @@
 from django.db import models
+from servicios.models import Servicios
+
 
 # Create your models here.
 
@@ -8,6 +10,7 @@ class Reservas(models.Model):
     telefono = models.IntegerField()
     fecha = models.DateField()
     hora = models.TimeField()
+    servicio = models.ForeignKey(Servicios , on_delete=models.SET_NULL , null=True)
 
 
     def __str__(self):
