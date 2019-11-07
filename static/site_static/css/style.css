@@ -1,11 +1,3 @@
-/*!
- * Project_Name: Beauty Salon Template
- * Author: Themezy
- * Email: info@themezy.com
- * URL: http://themezy.com
- */
-
-
 /*===========================================  Importing CSS Libraries ===========================================*/
 
 article,
@@ -2681,5 +2673,19 @@ img {
     max-width: 400px;
     width: auto;
     position: center;
-
+    width: 100%;
 }
+
+
+#divReservas {
+    background: url(../images/2.jpg)no-repeat center top;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: fixed;
+    width: 80%;
+    position: center;
+}
+
+   
