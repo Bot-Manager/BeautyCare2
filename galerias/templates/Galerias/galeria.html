@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<main class="main-content">
+    <div class="page">
+        <div class="container">
+            <div class="text-center">
+                <div class="filter-links filterable-nav">
+                    {% for category in categories %}
+                    <select class="mobile-filter">
+                        <option value="{{category}}"></option>
+                        <a href="#" class="current wow fadeInRight" data-filter="{{.category}}"></a>
+                        <!-- <option value=".hair">hair</option>
+                        <option value=".manicure">manicure</option>
+                        <option value=".pedicure">pedicure</option>
+                        <option value=".face">face</option>
+                        <option value=".makeup">makeup</option> -->
+                    </select>
+
+                  
+
+                    <a href="{{category}}" class="current wow fadeInRight" data-wow-delay=".2s" data-filter="{{category}}">{{category}}</a>
+                  
+                    <!-- <a href="#" class="wow fadeInRight" data-wow-delay=".4s" data-filter=".manicure">manicure</a>
+                    <a href="#" class="wow fadeInRight" data-wow-delay=".6s" data-filter=".pedicure">pedicure</a>
+                    <a href="#" class="wow fadeInRight" data-wow-delay=".8s" data-filter=".face">face</a>
+                    <a href="#" class="wow fadeInRight" data-wow-delay="1s" data-filter=".makeup">makeup</a> -->
+                    {% endfor %}
+                </div>
+            </div>
+
+           <!-- revisar como referenciar o linkear una imagen a esa misma en pantalla completa -->
+            <div class="filterable-items">
+                {% for galeria in lista_galeria %}
+                <div class="gallery-item filterable-item manicure">
+                    <a href="{{category}}"> 
+                        <figure class="featured-image">
+                            <img src="{{galeria.imagen.url}}" alt="">
+                            <figcaption>
+                                <h2 class="gallery-title">{{galeria.nombre}}</h2>
+                                <p>{{galeria.descripcion}}</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>   
+                {% endfor %}         
+            </div>
+            
+
+        </div>
+    </div>
+</main>
+
+
+{% endblock body %}
