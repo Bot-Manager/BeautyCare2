@@ -21,7 +21,7 @@
 
                   
 
-                    <a href="{{category}}" class="current wow fadeInRight" data-wow-delay=".2s" data-filter="{{category}}">{{category}}</a>
+                    <a href="{{galeria.imagen.url}}" class="current wow fadeInRight" data-wow-delay=".2s" data-filter="{{category}}">{{category}}</a>
                   
                     <!-- <a href="#" class="wow fadeInRight" data-wow-delay=".4s" data-filter=".manicure">manicure</a>
                     <a href="#" class="wow fadeInRight" data-wow-delay=".6s" data-filter=".pedicure">pedicure</a>
@@ -32,19 +32,22 @@
             </div>
 
            <!-- revisar como referenciar o linkear una imagen a esa misma en pantalla completa -->
-            <div class="filterable-items">
+            <div >
                 {% for galeria in lista_galeria %}
-                <div class="gallery-item filterable-item manicure">
-                    <a href="{{category}}"> 
-                        <figure class="featured-image">
-                            <img src="{{galeria.imagen.url}}" alt="">
-                            <figcaption>
-                                <h2 class="gallery-title">{{galeria.nombre}}</h2>
-                                <p>{{galeria.descripcion}}</p>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </div>   
+                    {% if lista_galeria.category == category %}
+                        <div class="gallery-item filterable-item">
+                            <a href="#"> 
+                                <figure class="featured-image">
+                                    <img src="{{galeria.imagen.url}}" alt="">
+                                    <figcaption>
+                                        <h2 class="gallery-title">{{galeria.nombre}}</h2>
+                                        <p>{{galeria.descripcion}}</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>   
+                        
+					{% endif %}
                 {% endfor %}         
             </div>
             
