@@ -22,8 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('servicios/' , include('servicios.urls' , namespace='servicios')),
     path('reservas/' , include('reservas.urls' , namespace='reservas')),
-    path('galerias/' , include('galerias.urls' , namespace='galerias')),
-    
 ]
 
 
