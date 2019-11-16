@@ -1,62 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bootstrap4 %}
 
 {% block body %}
-<div id="divReservas"> 
- <h1>BeautyCare</h1>
-    <div class="bg-agile">
-	<div class="book-appointment">
-	<h2>Reserva tu hora con nosotros</h2>
-			{% comment '' %}
-				<form action="#" method="post">
-				<div class="left-agileits-w3layouts same">
-				<div class="gaps">
-					<p>Tu nombre</p>
-					<input type="text" name="Name" placeholder="" required=""/>
-				</div>	
-				<div class="gaps">
-					<p>Email </p>
-					<input type="email" name="email" placeholder="" required="" />
-				</div>	
-				<div class="gaps">	
-					<p>Numero de contacto</p>
-					<input type="text" name="Number" placeholder="" required=""/>
-				</div>
-				</div>
-				<div class="right-agileinfo same">
-				<div class="gaps">
-				<p>Selecciona una fecha</p>		
-				<input  id="datepicker1" name="Text" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-				</div>
-				<div class="gaps">
-				<p>Selecciona la hora</p>		
-				<input type="text" id="timepicker" name="Time" class="timepicker form-control" value="">	
-				</div>
-				<div class="gaps">
-				<p>Servicios</p>	
-				<select class="form-control">
-					<option></option>
-					<option>Facial Masking</option>
-					<option>Nail polish</option>
-					<option>Body Massage</option>
-					<option>Foot Massage</option>
-					<option>Special Makeup</option>
-					<option>Spa Therapy</option>
-				</select>
-			</div>
+	<div id="divReservas"> 
+		<h1>BeautyCare</h1>
+		<div class="bg-agile">
+			<div class="book-appointment">
+				<h2>Reserva tu hora con nosotros</h2>
 			
+				<form action="" method="POST" class="form">
+					{% csrf_token %}
+					{% bootstrap_form form %}
+					{% buttons %}
+						<button type="submit" class="btn btn-primary">Reserva</button>
+					{% endbuttons %}
+				</form>
 			</div>
-			<div class="clear"></div>
-				<input type="submit" value="Reserva tu hora">
-			</form>
-			{% endcomment %}
-			<form action="" method="POST">
-				{% csrf_token %}
-				{{form}}
-
-				<button type="submit" class="btn btn-primary">Submit</button>
-			</form>
 		</div>
-   </div>
-</div>
+	</div>
 {% endblock body %}

@@ -16,8 +16,7 @@
 		
 		<link href="//fonts.googleapis.com/css?family=Signika:300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
 		<link rel="stylesheet" href="{% static 'site_static/css/jquery-ui.css' %}" />
-		<link href="{% static 'site_static/css/wickedpicker.css' %}" rel="stylesheet" type='text/css' media="all" />
-		<link rel="stylesheet" href="{% static 'site_static/css/style2.css' %}">
+		
 		<link rel="stylesheet" href="{% static 'site_static/css/style.css' %}">
 		<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
@@ -46,9 +45,9 @@
 					<div class="main-navigation">
 						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item"><a href="index.html">Home</a></li>
+							<li class="menu-item"><a href="{% url 'home' %}">Home</a></li>
 							<li class="menu-item"><a href="{% url 'reservas:reserva_servicio' %}">Reservas</a></li>
-							<li class="menu-item"><a href="service.html">Servicios</a></li>
+							<li class="menu-item"><a href="{% url 'servicios:lista_servicio' %}">Servicios</a></li>
 							<li class="menu-item"><a href="gallery.html">Galeria</a></li>
 							<li class="menu-item"><a href="contact.html">Contacto</a></li>
 						</ul> <!-- .menu -->
@@ -107,16 +106,8 @@
 		<script src="{% static 'site_static/js/app.js' %}"></script>
 
 		<script type="text/javascript" src="{% static 'site_static/js/jquery-2.1.4.min.js' %}"></script>
-		<script type="text/javascript" src="{% static 'site_static/js/wickedpicker.js' %}"></script>
-			<script type="text/javascript">
-				$('.timepicker').wickedpicker({twentyFour: false});
-			</script>
-		<script src="{% static 'site_static/js/jquery-ui.js' %}"></script>
-		<script>
-			$(function() {
-			$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
-			});
-		</script>
+		
+	
 	</body>
 
 </html>
