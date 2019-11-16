@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+#Denisse2 se une a la partida
 # Application definition
 
 INSTALLED_APPS = [
