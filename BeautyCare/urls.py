@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path , include
 from django.conf import settings
 from django.conf.urls.static import static
+from servicios.views import mostrarHome
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('' , mostrarHome),
     path('servicios/' , include('servicios.urls' , namespace='servicios')),
     path('reservas/' , include('reservas.urls' , namespace='reservas')),
 ]
