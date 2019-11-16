@@ -21,7 +21,7 @@ from servicios.views import mostrarHome
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('' , mostrarHome),
+    path('' , mostrarHome, name='home'),
     path('servicios/' , include('servicios.urls' , namespace='servicios')),
     path('reservas/' , include('reservas.urls' , namespace='reservas')),
 ]
