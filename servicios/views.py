@@ -22,3 +22,7 @@ def detalle_servicio(request , slug):
     context = {'detalle_servicio' : detalle_servicio}
 
     return render(request , 'Servicios/detalle.html' , context)
+
+
+def mostrarHome(request):
+    return render(request,'Home.html',{})
