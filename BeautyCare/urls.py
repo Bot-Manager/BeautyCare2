@@ -16,14 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path , include
 from django.conf import settings
-from django.conf.urls.static import static
-from servicios.views import mostrarHome
+from django.conf.urls.static import static  
+from reservas.views import lista_reserva
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('' , mostrarHome, name='home'),
     path('servicios/' , include('servicios.urls' , namespace='servicios')),
     path('reservas/' , include('reservas.urls' , namespace='reservas')),
+    path('' , include('home.urls' , namespace='home')),
 ]
 
 

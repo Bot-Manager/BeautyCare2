@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block body %}
+
+    {% for reserva in lista_reserva %}
+        <div class="row">
+			<div class="col-md-3">
+				<div class="feature">
+					<h3 class="feature-title"> <a href=""> {{reserva.nombre}}</a></h3>
+					<p>{{reserva.servicio}} </p>
+				</div>
+
+			</div>
+    {% endfor %}
+{% endblock body %}
