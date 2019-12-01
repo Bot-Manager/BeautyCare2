@@ -15,3 +15,12 @@ def reserva_servicio(request):
     context = {'form' : reserva_form}
 
     return render(request , 'Reservas/reservas.html' , context)
+
+def lista_reserva(request):
+    lista_reserva = Reservas.objects.all()
+
+    context = {
+        'lista_reserva' : lista_reserva ,
+        }
+
+    return render(request , 'Reservas/lista_reservas.html' , context)

@@ -36,7 +36,7 @@
 						<img src="{% static 'site_static/images/logo.png' %}" alt="Company name" class="logo">
 						<div class="logo-copy">
 							<h1 class="site-title">Beauty&Care</h1>
-							<small class="site-description">Belleza y cuidados</small>
+							<small class="site-description">Belleza y Cuidado</small>
 						</div>
 					</a> <!-- #branding -->
 
@@ -45,15 +45,23 @@
 					<div class="main-navigation">
 						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item"><a href="{% url 'home' %}">Home</a></li>
+							<li class="menu-item"><a href="{% url 'home:home' %}">Home</a></li>
 							<li class="menu-item"><a href="{% url 'reservas:reserva_servicio' %}">Reservas</a></li>
 							<li class="menu-item"><a href="{% url 'servicios:lista_servicio' %}">Servicios</a></li>
 							<li class="menu-item"><a href="{% url 'galerias:lista_galeria' %}">Galeria</a></li>
 							<li class="menu-item"><a href="contact.html">Contacto</a></li>
+
+							<li class="nav-item"><a href=""
+                                class="nav-link btn btn-danger btn-lg">Log In</a></li>
 						</ul> <!-- .menu -->
 					</div> <!-- .main-navigation -->
-
+					
+					<div class="main-navigation">
+						
+					</div> <!-- .main-navigation -->
 					<div class="mobile-navigation"></div>
+					
+					
 				</div>
 			</header>
 
