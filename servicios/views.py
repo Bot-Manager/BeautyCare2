@@ -25,4 +25,4 @@ def detalle_servicio(request , slug):
 
 
 def mostrarHome(request):
-    return render(request,'Home.html',{})
+    return render(request,'Home.html',{}) 

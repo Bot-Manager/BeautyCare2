@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     'servicios',
     'reservas',
+    'galerias',
 ]
 
 MIDDLEWARE = [
