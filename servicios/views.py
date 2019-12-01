@@ -24,3 +24,8 @@ def detalle_servicio(request , slug):
     return render(request , 'Servicios/detalle.html' , context)
 
 
+<<<<<<< HEAD
+def mostrarHome(request):
+    return render(request,'Home.html',{}) 
+=======
+>>>>>>> master

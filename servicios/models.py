@@ -32,5 +32,9 @@ class Categoria(models.Model):
     nombre = models.CharField(max_length=25)
 
 
+    class Meta:
+        verbose_name = 'categoria'
+        verbose_name_plural = 'categorias'
+
     def __str__(self):
         return self.nombre
