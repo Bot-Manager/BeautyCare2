@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.text import slugify
 # Create your models here.
 
+
 class Servicios(models.Model):
     nombre = models.CharField(max_length=50)
     descripcion = models.TextField(max_length=500)
@@ -31,6 +32,10 @@ class Servicios(models.Model):
 class Categoria(models.Model):
     nombre = models.CharField(max_length=25)
 
+
+    class Meta:
+        verbose_name = 'categoria'
+        verbose_name_plural = 'categorias'
 
     def __str__(self):
         return self.nombre
