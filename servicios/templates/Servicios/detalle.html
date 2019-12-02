@@ -1,12 +1,31 @@
 {% extends 'base.html' %}
 
+{% load static%}
+
 {% block body %}
 
-<img class="servicio_img" src="{{detalle_servicio.imagen.url}}" alt="">
-<h1>{{detalle_servicio.nombre}}</h1>
+<div class="fullwidth-block information-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <figure><img src="{{detalle_servicio.imagen.url}} "class=feature-image style="max-height: 500px;" style="max-width: max-content;"></figure>
+                </div>
+                <div class="col-md-6" >
+               
+                    <p class="feature-title">{{detalle_servicio.nombre}}</p>
+                    <p>{{detalle_servicio.descripcion}}</p>
+                    <p>Precio $: {{detalle_servicio.precio}}</p>
+          
+            </div>
+        </div>
+    </div> <!-- .fullwidth-block.information-section -->
 
-<h3>{{detalle_servicio.descripcion}}</h3>
-<h3>{{detalle_servicio.precio}}</h3>
-<p>Precio $: {{detalle_servicio.precio}} </p>
+
+
+
+
+
 
 {% endblock body %}

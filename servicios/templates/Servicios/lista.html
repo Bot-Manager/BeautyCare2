@@ -18,9 +18,10 @@
 									<div class="feature">
 										<img class="servicio_img" src="{{servicio.imagen.url}}" alt="">
 										<h3 class="feature-title"> <a href="{% url 'servicios:detalle_servicio' servicio.slug%}"> {{servicio.nombre}}</a></h3>
-										<p>{{servicio.descripcion}} </p>
+										<!-- <p>{{servicio.descripcion}} </p> -->
 									</div>
-
+<br>
+<br>
 							</div> <!-- .row -->
 
 						{% endfor %}
@@ -39,18 +40,6 @@
 													{% endfor %}
 											</ul>
 										</div>
-
-	<!-- 									
-									</div>
-									<div class="col-md-6">
-										<div class="price-list">
-											<h2 class="section-title">Para '{{categoria}}'</h2>
-											<ul class="prices">
-													{% for servicio in lista_servicio %}
-													<li>{{servicio.nombre}}<span class="price">$ {{servicio.precio}}</span></li>
-													{% endfor %}
-											</ul>
-										</div> -->
 									</div>
 								{% endfor %}
 							</div>
