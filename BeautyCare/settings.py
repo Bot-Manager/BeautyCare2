@@ -46,8 +46,13 @@ INSTALLED_APPS = [
     'nosotros',
 
     'users.apps.UsersConfig',
+    'rest_framework',
 
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -128,6 +133,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
 
 CRISPY_TEMPLATE_PACK = 'boostrap4'
 

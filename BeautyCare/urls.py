@@ -35,6 +35,7 @@ urlpatterns = [
     path('' , include('home.urls' , namespace='home')),
     path('nosotros/' , include('nosotros.urls' , namespace='nosotros')),
     path('perfil/' , users_views.perfil , name='perfil'),
+    path('api/', include('api.urls')),
 ]
 
 
