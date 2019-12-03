@@ -42,8 +42,11 @@ INSTALLED_APPS = [
     'reservas',
     'galerias',
     'home',
+
+    'nosotros',
+
     'users.apps.UsersConfig',
-    
+
 ]
 
 MIDDLEWARE = [
