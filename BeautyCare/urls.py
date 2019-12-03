@@ -19,7 +19,7 @@ from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static  
 from reservas.views import lista_reserva 
-from users.views import registro
+from users import views as users_views
 
 
 
@@ -31,7 +31,7 @@ urlpatterns = [
     path('listaReservas/' , lista_reserva),
     path('login/' , auth_views.LoginView.as_view(template_name='users/login.html') , name='login'),
     path('logout/' , auth_views.LogoutView.as_view(template_name='users/logout.html') , name='logout'),
-    path('registro/' , include('users.urls' , namespace='users')),
+    path('registro/' , users_views.registro , name='registro'),
     path('' , include('home.urls' , namespace='home')),
 ]
 
