@@ -26,8 +26,11 @@ urlpatterns = [
     path('reservas/' , include('reservas.urls' , namespace='reservas')),
     path('galerias/' , include('galerias.urls' , namespace='galerias')),
     path('' , include('home.urls' , namespace='home')),
+    path('nosotros/' , include('nosotros.urls' , namespace='nosotros')),
 ]
 
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header = "Administración Beauty&Care"

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block body %}
+
+
+    <main class="main-content">
+        <div class="page">
+            <div class="container">
+                    <h2 class="slider-title">Salon de Belleza Beauty&Care</h2>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="section-title">{{nosotros.titulo}}</h3>
+                        <figure><img src="{% static 'site_static/images/salon.jpg' %}" alt=""></figure>
+                        <h4></h4>
+                        <p>{{nosotros.contenido}}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="section-title">Pasión</h3>
+
+                        {% for info in pasion %}
+                            <h4>{{info.titulo}}</p>
+                            <p>{{info.contenido}}</p>
+
+                        {% endfor %}
+
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="section-title">Equipo</h3>
+
+                        {% for foto in profesional %}
+                        <!-- <div class="row"> -->
+                            <div class="col-md-6">
+                                <div class="team small">
+                                    <figure class="team-image"><img src="{{foto.imagen.url}}"></figure>
+                                    <h3 class="team-name">{{foto.nombre}}</h3>
+                                    <p>{{foto.titulo}}</p>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+{% endblock body %}

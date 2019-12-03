@@ -500,6 +500,7 @@ all and (min-device-pixel-ratio: 1.5) {
 }
 
 .team {
+    display: block;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -513,7 +514,7 @@ all and (min-device-pixel-ratio: 1.5) {
 }
 
 .team .team-image img {
-    display: block;
+    display:block;
     max-width: 100%;
     width: 100%;
 }
