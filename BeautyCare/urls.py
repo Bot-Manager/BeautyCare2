@@ -33,6 +33,7 @@ urlpatterns = [
     path('logout/' , auth_views.LogoutView.as_view(template_name='users/logout.html') , name='logout'),
     path('registro/' , users_views.registro , name='registro'),
     path('' , include('home.urls' , namespace='home')),
+    path('perfil/' , users_views.perfil , name='perfil'),
 ]
 
 
