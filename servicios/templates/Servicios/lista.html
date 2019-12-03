@@ -8,41 +8,42 @@
 <main class="main-content">
 				<div class="page">
 					<div class="container">
-							<h2 class="section-title">Descubre Nuestros Servicios</h2>
-							<br>
+						<h2 class="section-title">Descubre Nuestros Servicios</h2>
+						<br>
 						
 						
 						{% for servicio in lista_servicio %}
-							<div class="row">
+							<div >
 								<div class="col-md-3">
 									<div class="feature">
 										<img class="servicio_img" src="{{servicio.imagen.url}}" alt="">
 										<h3 class="feature-title"> <a href="{% url 'servicios:detalle_servicio' servicio.slug%}"> {{servicio.nombre}}</a></h3>
 										<!-- <p>{{servicio.descripcion}} </p> -->
 									</div>
-<br>
-<br>
+									
+						<br>
+						<br>
 							</div> <!-- .row -->
 
 						{% endfor %}
 
-						
-							<div class="row">
-								{% for categoria in categorias %}
-									<div class="col-md-6">
-										<div class="price-list">
-											<h2 class="section-title">Para {{categoria}}</h2>
-											<ul class="prices">
-													{% for servicio in lista_servicio %}
-														{% if servicio.categoria == categoria %}
-															<li>{{servicio.nombre}}<span class="price">$ {{servicio.precio}}</span></li>
-														{% endif %}
-													{% endfor %}
-											</ul>
-										</div>
+
+						{% for categoria in categorias %}
+							<div>
+								<div class="col-md-6">
+									<div class="price-list">
+										<h2 class="section-title">Para {{categoria}}</h2>
+										<ul class="prices">
+										{% for servicio in lista_servicio %}
+											{% if servicio.categoria == categoria %}
+												<li>{{servicio.nombre}}<span class="price">$ {{servicio.precio}}</span></li>
+											{% endif %}
+										{% endfor %}
+										</ul>
 									</div>
-								{% endfor %}
+								</div>
 							</div>
+						{% endfor %}
 					
 
 		

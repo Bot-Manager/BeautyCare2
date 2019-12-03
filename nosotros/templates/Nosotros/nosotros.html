@@ -8,7 +8,7 @@
     <main class="main-content">
         <div class="page">
             <div class="container">
-                    <h2 class="slider-title">Salon de Belleza Beauty&Care</h2>
+                <h2 class="slider-title">Salon de Belleza Beauty&Care</h2>
 
                 <div class="row">
                     <div class="col-md-4">
@@ -21,8 +21,9 @@
                         <h3 class="section-title">Pasión</h3>
 
                         {% for info in pasion %}
-                            <h4>{{info.titulo}}</p>
-                            <p>{{info.contenido}}</p>
+                            <h4 style="font-style: italic;">{{info.titulo}}</p>
+                            <p style="font-weight: lighter;">{{info.contenido}}</p>
+                            <br>
 
                         {% endfor %}
 
