@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.text import slugify
 # Create your models here.
 
+
 class Servicios(models.Model):
     nombre = models.CharField(max_length=50)
     descripcion = models.TextField(max_length=500)
