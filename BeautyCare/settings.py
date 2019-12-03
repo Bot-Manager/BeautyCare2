@@ -133,6 +133,8 @@ CRISPY_TEMPLATE_PACK = 'boostrap4'
 
 LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000'
 
+LOGIN_URL = 'login'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
