@@ -1,5 +1,6 @@
 from django.db import models
 from servicios.models import Servicios
+from django.utils.translation import ugettext as _
 
 
 
@@ -16,4 +17,10 @@ class Reservas(models.Model):
 
     def __str__(self):
         return self.nombre
+    
+    class Meta:
+        permissions = (
+            ('gerente',_('Es gerente')),
+            ('cliente',_('Es cliente')),
+        )
     
