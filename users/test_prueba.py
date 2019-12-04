@@ -1,8 +1,6 @@
 from django.contrib.auth.models import User
 from django.test import TestCase
 
-# Create your tests here.
-
 
 class Login(TestCase): 
     def setUp(self)
@@ -14,4 +12,4 @@ class Login(TestCase):
     def logeo(self)
         response = self.client.post('/login', self.credentials, follow = True)
 
-        self.assertTrue(response.context['user'].is_active)        
+        self.assertTrue(response.context['user'].is_active)       
