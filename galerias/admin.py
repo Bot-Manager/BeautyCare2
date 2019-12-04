@@ -12,5 +12,10 @@ class Lista(admin.ModelAdmin):
 
 
 
+class Lista(admin.ModelAdmin):
+    list_display = ['nombre', 'descripcion', 'imagen', 'categoria' ]
+    search_fields = ['nombre']
+    list_filter = ['categoria']
+
 admin.site.register(Galerias,Lista)
 admin.site.register(Categoria)

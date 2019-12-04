@@ -4,4 +4,11 @@ from django.contrib import admin
 from .models import Reservas
 
 
-admin.site.register(Reservas)
+class Lista(admin.ModelAdmin):
+    list_display = ['nombre', 'email', 'telefono','fecha', 'hora', 'servicio']
+    search_fields = ['nombre', 'email', 'telefono']
+    list_filter = ('fecha', 'servicio')
+
+
+
+admin.site.register(Reservas, Lista)
