@@ -3,3 +3,10 @@ clave: Duoc.2019
 
 Usuario: gerente 
 clave: Duoc.2019
+
+
+user github: Bot-Manager 
+pass: dracarys1986
+
+user github: Denisse-bot
+pass: Calbuco1.
