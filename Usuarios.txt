@@ -1,0 +1,5 @@
+Usuario: cliente 
+clave: Duoc.2019
+
+Usuario: gerente 
+clave: Duoc.2019
